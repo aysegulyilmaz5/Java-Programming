@@ -1,1 +1,1 @@
-# friendnumber
+# javaprimenumber
