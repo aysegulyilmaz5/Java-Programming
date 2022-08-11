@@ -1,23 +1,34 @@
 package javapolymorphism;
 
-public abstract class Animal {
-	public abstract void animalSound();
-	public void sleep() {
-		System.out.println("Zzzz");
+public class Animal {
+	
+	public void animalSound() {
+		System.out.println("The animal makes a sound");
 	}
 
 }
 
 class Pig extends Animal{
 	public void animalSound() {
-		System.out.println("The pig says:wee wee");
+		System.out.println("The pig says: wee wee");
+	}
+}
+
+class Dog extends Animal{
+	public void animalSound() {
+		System.out.println("The dog says: haw haw");
+		
 	}
 }
 
 class MyMainClass{
 	public static void main(String[] args) {
-		Pig myPig = new Pig();
+		Animal myAnimal = new Animal();
+		Animal myPig = new Pig();
+		Animal myDog = new Dog();
+		
+		myAnimal.animalSound();
 		myPig.animalSound();
-		myPig.sleep();
+		myDog.animalSound();
 	}
 }
